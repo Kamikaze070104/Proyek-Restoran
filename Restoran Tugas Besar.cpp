@@ -106,7 +106,7 @@ int main(){
             case 9 : cout<<"Kopi Original"<<endl;
             break;
 
-            case 10 : cout<<"Eskrim"<<endl;
+            case 10 : cout<<"Es krim"<<endl;
             break;
 
             default : cout<<"tidak ada menu"<<endl;
