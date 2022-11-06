@@ -81,7 +81,7 @@ int main(){
         switch(menu) {
             case 1 : cout<<"Seblak"<<endl;   
             break;
-            ke
+            
             case 2 : cout<<"Batagor"<<endl;    
             break;
 
