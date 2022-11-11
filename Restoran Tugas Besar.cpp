@@ -79,7 +79,7 @@ int main(){
         cout<<"silahkan pilih menu (1-10): ";
         cin>>menu;
         switch(menu) {
-            case 1 : cout<<"Seblak"<<endl;   
+            case 1 : cout<<"Seblak"<<endl;   kelompok3
             break;
             
             case 2 : cout<<"Batagor"<<endl;    
