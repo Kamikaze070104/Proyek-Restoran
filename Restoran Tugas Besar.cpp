@@ -7,36 +7,36 @@ Anggota kelompok :
 3. Jovanka Alexandro 2206407
 4. Nadila putri p 2209757 */
 void menu_makanan() {
-    cout << "1. Seblak      : Rp 10.000" << endl;
-    cout << "2. Batagor     : Rp 15.000" << endl;
-    cout << "3. Bakso       : Rp 12.000" << endl;
-    cout << "4. Nasi Goreng : Rp 18.000" << endl;
-    cout << "5. Bubur Aceh  : Rp 5.000"  << endl;
+    cout<<"1. Seblak      : Rp 10.000\n";
+    cout<<"2. Batagor     : Rp 15.000\n";
+    cout<<"3. Bakso       : Rp 12.000\n";
+    cout<<"4. Nasi Goreng : Rp 18.000\n";
+    cout<<"5. Bubur Aceh  : Rp 5.000\n";
 }
 void menu_minuman() {
-    cout << "6. Es Kopi Susu      : Rp 5.000"  << endl;
-    cout << "7. Brown Sugar Boba  : Rp 12.000" << endl;
-    cout << "8. Matcha Latte      : Rp 10.000" << endl;
-    cout << "9. Kopi original     : Rp 4.000"  << endl;
-    cout << "10. Es Krim          : Rp 8.000"  << endl;
+    cout<<"6. Es Kopi Susu      : Rp 5.000\n"; 
+    cout<<"7. Brown Sugar Boba  : Rp 12.000\n";
+    cout<<"8. Matcha Latte      : Rp 10.000\n";
+    cout<<"9. Kopi original     : Rp 4.000\n";
+    cout<<"10. Es Krim          : Rp 8.000\n";
 }
 int main(){
     int menu;
     string ulang;
-    for (int i = 2; i >= 0; --i){	
-         cout << "" << endl;
-         cout << ")----------Silahkan Login------------(" << endl;
-         cout << "" << endl;
+    for(int i = 2; i >= 0; --i){	
+         cout<<"\n";
+         cout<<"\t\t\t)----------Silahkan Login------------(\n";
+         cout<<"\n";
         string pass;
         string benar;
         string username;
         string benarN;
-        cout << "username: "; cin >> username;
-        cout << "Password: "; cin >> pass; 
-        benar = "restoran";
-        benarN = "kelompok3";
+        cout<<"username: "; cin>>username;
+        cout<<"Password: "; cin>>pass; 
+        benar="restoran";
+        benarN="kelompok3";
         system("cls");
-        if(pass == benar && username == benarN){
+        if(pass==benar&&username==benarN){
             cout << "selamat datang" << endl;
             break;
         }
@@ -45,13 +45,13 @@ int main(){
             return 0;
             break;
         }
-    cout << "Login salah! Kesempatan Anda " << i << " kali lagi"<< endl;
+    cout<<"Login salah! Kesempatan Anda "<< i <<" kali lagi\n";
 }
     do {
     	system("cls");
-        cout << "==================================================" << endl;
-        cout << "======= Selamat Datang di IZEL Coffe Shop ========" << endl;
-        cout << "==================================================" << endl << endl;
+        cout<<"\t==================================================\n";
+        cout<<"\t======= Selamat Datang di IZEL Coffe Shop ========\n";
+        cout<<"\t==================================================\n";
         cout<<"Menu Makanan :"<<endl;
         menu_makanan();
         cout << "==================================================" << endl;
