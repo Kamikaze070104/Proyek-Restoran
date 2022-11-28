@@ -7,25 +7,25 @@ Anggota kelompok :
 3. Jovanka Alexandro 2206407
 4. Nadila putri p 2209757 */
 void menu_makanan(){
-    cout<<"\t\t\t1. Seblak      : Rp 10.000\n";
-    cout<<"\t\t\t2. Batagor     : Rp 15.000\n";
-    cout<<"\t\t\t3. Bakso       : Rp 12.000\n";
-    cout<<"\t\t\t4. Nasi Goreng : Rp 18.000\n";
-    cout<<"\t\t\t5. Bubur Aceh  : Rp 5.000\n";
+    cout<<"\t\t\t\t1. Seblak      : Rp 10.000\n";
+    cout<<"\t\t\t\t2. Batagor     : Rp 15.000\n";
+    cout<<"\t\t\t\t3. Bakso       : Rp 12.000\n";
+    cout<<"\t\t\t\t4. Nasi Goreng : Rp 18.000\n";
+    cout<<"\t\t\t\t5. Bubur Aceh  : Rp 5.000\n";
 }
 void menu_minuman(){
-    cout<<"\t\t\t6. Es Kopi Susu      : Rp 5.000\n"; 
-    cout<<"\t\t\t7. Brown Sugar Boba  : Rp 12.000\n";
-    cout<<"\t\t\t8. Matcha Latte      : Rp 10.000\n";
-    cout<<"\t\t\t9. Kopi original     : Rp 4.000\n";
-    cout<<"\t\t\t10. Es Krim          : Rp 8.000\n";
+    cout<<"\t\t\t\t6. Es Kopi Susu      : Rp 5.000\n"; 
+    cout<<"\t\t\t\t7. Brown Sugar Boba  : Rp 12.000\n";
+    cout<<"\t\t\t\t8. Matcha Latte      : Rp 10.000\n";
+    cout<<"\t\t\t\t9. Kopi original     : Rp 4.000\n";
+    cout<<"\t\t\t\t10. Es Krim          : Rp 8.000\n";
 }
 int main(){
     int menu;
     string ulang;
     for(int i = 2; i >= 0; --i){	
          cout<<"\n";
-         cout<<"\t\t\t)----------Silahkan Login------------(\n";
+         cout<<"\t\t\t\t)----------Silahkan Login------------(\n";
          cout<<"\n";
         string pass;
         string benar;
@@ -49,39 +49,39 @@ int main(){
 }
     do {
     	system("cls");
-        cout<<"\t\t\t==================================================\n";
-        cout<<"\t\t\t======= Selamat Datang di IZEL Coffe Shop ========\n";
-        cout<<"\t\t\t==================================================\n";
-        cout<<"\t\t\tMenu Makanan :"<<endl;
+        cout<<"\t\t\t\t==================================================\n";
+        cout<<"\t\t\t\t======= Selamat Datang di IZEL Coffe Shop ========\n";
+        cout<<"\t\t\t\t==================================================\n";
+        cout<<"\t\t\t\tMenu Makanan :\n";
         menu_makanan();
-        cout << "\t\t\t==================================================" << endl;
-        cout<<"\t\t\tMenu Minuman :"<<endl;
+        cout<<"\t\t\t\t==================================================" << endl;
+        cout<<"\t\t\t\tMenu Minuman :\n";
         menu_minuman();
-        cout << "\t\t\t==================================================" << endl;
-        cout<<"\t\t\tsilahkan pilih menu (1-10): ";
+        cout<<"\t\t\t\t==================================================" << endl;
+        cout<<"\t\t\t\tsilahkan pilih menu (1-10): ";
         cin>>menu;
         switch(menu) {
-            case 1 : cout<<"Seblak"<<endl;
+            case 1 : cout<<"Seblak\n";
             break;  
-            case 2 : cout<<"Batagor"<<endl;    
+            case 2 : cout<<"Batagor\n";    
             break;
-            case 3 : cout<<"Bakso"<<endl;   
+            case 3 : cout<<"Bakso\n";   
             break;
-            case 4 : cout<<"Nasi Goreng"<<endl;   
+            case 4 : cout<<"Nasi Goreng\n";   
             break;
-            case 5 : cout<<"Bubur Aceh"<<endl; 
+            case 5 : cout<<"Bubur Aceh\n"; 
             break;
-            case 6 : cout<<"Es Kopi Susu"<<endl; 
+            case 6 : cout<<"Es Kopi Susu\n"; 
             break;
-            case 7 : cout<<"Brown Sugar Boba"<<endl;   
+            case 7 : cout<<"Brown Sugar Boba\n";   
             break;
-            case 8 : cout<<"Matcha Latte"<<endl; 
+            case 8 : cout<<"Matcha Latte\n"; 
             break;
-            case 9 : cout<<"Kopi Original"<<endl;
+            case 9 : cout<<"Kopi Original\n";
             break;
-            case 10 : cout<<"Es krim"<<endl;
+            case 10 : cout<<"Es krim\n";
             break;
-            default : cout<<"tidak ada menu"<<endl;
+            default : cout<<"tidak ada menu\n";
         }      
         cout << "mau pesan lagi? (y/n) ";
         cin >> ulang;
