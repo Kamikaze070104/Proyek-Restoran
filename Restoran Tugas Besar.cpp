@@ -6,19 +6,19 @@ Anggota kelompok :
 2. Rofi'ul Himam 2206231
 3. Jovanka Alexandro 2206407
 4. Nadila putri p 2209757 */
-void menu_makanan() {
-    cout<<"1. Seblak      : Rp 10.000\n";
-    cout<<"2. Batagor     : Rp 15.000\n";
-    cout<<"3. Bakso       : Rp 12.000\n";
-    cout<<"4. Nasi Goreng : Rp 18.000\n";
-    cout<<"5. Bubur Aceh  : Rp 5.000\n";
+void menu_makanan(){
+    cout<<"\t\t\t1. Seblak      : Rp 10.000\n";
+    cout<<"\t\t\t2. Batagor     : Rp 15.000\n";
+    cout<<"\t\t\t3. Bakso       : Rp 12.000\n";
+    cout<<"\t\t\t4. Nasi Goreng : Rp 18.000\n";
+    cout<<"\t\t\t5. Bubur Aceh  : Rp 5.000\n";
 }
-void menu_minuman() {
-    cout<<"6. Es Kopi Susu      : Rp 5.000\n"; 
-    cout<<"7. Brown Sugar Boba  : Rp 12.000\n";
-    cout<<"8. Matcha Latte      : Rp 10.000\n";
-    cout<<"9. Kopi original     : Rp 4.000\n";
-    cout<<"10. Es Krim          : Rp 8.000\n";
+void menu_minuman(){
+    cout<<"\t\t\t6. Es Kopi Susu      : Rp 5.000\n"; 
+    cout<<"\t\t\t7. Brown Sugar Boba  : Rp 12.000\n";
+    cout<<"\t\t\t8. Matcha Latte      : Rp 10.000\n";
+    cout<<"\t\t\t9. Kopi original     : Rp 4.000\n";
+    cout<<"\t\t\t10. Es Krim          : Rp 8.000\n";
 }
 int main(){
     int menu;
@@ -37,11 +37,11 @@ int main(){
         benarN="kelompok3";
         system("cls");
         if(pass==benar&&username==benarN){
-            cout << "selamat datang" << endl;
+            cout<<"selamat datang\n";
             break;
         }
         else if(i==0){
-           cout << "anda tidak diperkenankan masuk!" <<endl;
+           cout<<"anda tidak diperkenankan masuk!\n";
             return 0;
             break;
         }
@@ -49,16 +49,16 @@ int main(){
 }
     do {
     	system("cls");
-        cout<<"\t==================================================\n";
-        cout<<"\t======= Selamat Datang di IZEL Coffe Shop ========\n";
-        cout<<"\t==================================================\n";
-        cout<<"Menu Makanan :"<<endl;
+        cout<<"\t\t\t==================================================\n";
+        cout<<"\t\t\t======= Selamat Datang di IZEL Coffe Shop ========\n";
+        cout<<"\t\t\t==================================================\n";
+        cout<<"\t\t\tMenu Makanan :"<<endl;
         menu_makanan();
-        cout << "==================================================" << endl;
-        cout<<"Menu Minuman :"<<endl;
+        cout << "\t\t\t==================================================" << endl;
+        cout<<"\t\t\tMenu Minuman :"<<endl;
         menu_minuman();
-        cout << "==================================================" << endl;
-        cout<<"silahkan pilih menu (1-10): ";
+        cout << "\t\t\t==================================================" << endl;
+        cout<<"\t\t\tsilahkan pilih menu (1-10): ";
         cin>>menu;
         switch(menu) {
             case 1 : cout<<"Seblak"<<endl;
