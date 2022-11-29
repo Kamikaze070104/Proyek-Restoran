@@ -31,8 +31,8 @@ int main(){
         string benar;
         string username;
         string benarN;
-        cout<<"username: "; cin>>username;
-        cout<<"Password: "; cin>>pass; 
+        cout<<"\t\t\tusername: "; cin>>username;
+        cout<<"\t\t\tPassword: "; cin>>pass; 
         benar="restoran";
         benarN="kelompok3";
         system("cls");
@@ -61,34 +61,35 @@ int main(){
         cout<<"\t\t\t\tsilahkan pilih menu (1-10): ";
         cin>>menu;
         switch(menu) {
-            case 1 : cout<<"Seblak\n";
+            case 1 : cout<<"\t\t\t\tSeblak\n";
             break;  
-            case 2 : cout<<"Batagor\n";    
+            case 2 : cout<<"\t\t\t\tBatagor\n";    
             break;
-            case 3 : cout<<"Bakso\n";   
+            case 3 : cout<<"\t\t\t\tBakso\n";   
             break;
-            case 4 : cout<<"Nasi Goreng\n";   
+            case 4 : cout<<"\t\t\t\tNasi Goreng\n";   
             break;
-            case 5 : cout<<"Bubur Aceh\n"; 
+            case 5 : cout<<"\t\t\t\tBubur Aceh\n"; 
             break;
-            case 6 : cout<<"Es Kopi Susu\n"; 
+            case 6 : cout<<"\t\t\t\tEs Kopi Susu\n"; 
             break;
-            case 7 : cout<<"Brown Sugar Boba\n";   
+            case 7 : cout<<"\t\t\t\tBrown Sugar Boba\n";   
             break;
-            case 8 : cout<<"Matcha Latte\n"; 
+            case 8 : cout<<"\t\t\t\tMatcha Latte\n"; 
             break;
-            case 9 : cout<<"Kopi Original\n";
+            case 9 : cout<<"\t\t\t\tKopi Original\n";
             break;
-            case 10 : cout<<"Es krim\n";
+            case 10 : cout<<"\t\t\t\tEs krim\n";
             break;
-            default : cout<<"tidak ada menu\n";
+            default : cout<<"\t\t\t\ttidak ada menu\n";
         }      
-        cout << "mau pesan lagi? (y/n) ";
-        cin >> ulang;
+        cout<<"\t\t\t\tmau pesan lagi? (y/n) ";  cin>>ulang;
+       
     }  
     while(ulang == "y");
     system("cls");
-    cout<<"pesanan selesai, silahkan datang kembali...";
+    cout<<"\t\t\t\tpesanan selesai, silahkan datang kembali...";
+    system("pause");
     return main();
 }
     
