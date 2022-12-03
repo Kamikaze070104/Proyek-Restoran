@@ -5,7 +5,7 @@ Anggota kelompok :
 1. Faizal Azzriel Gibar 2205719
 2. Rofi'ul Himam 2206231
 3. Jovanka Alexandro 2206407
-4. Nadila putri p 2209757 */
+4. Nadila putri Prihanita 2209757 */
 void menu_makanan(){
     printf("\t\t\t\t1. Seblak      : Rp 10.000\n");
     printf("\t\t\t\t2. Batagor     : Rp 15.000\n");
@@ -31,8 +31,8 @@ int main(){
         string benar;
         string username;
         string benarN;
-        cout<<"\t\t\tusername: "; cin>>username;
-        cout<<"\t\t\tPassword: "; cin>>pass; 
+        cout<<"\t\t\t\tusername: "; cin>>username;
+        cout<<"\t\t\t\tPassword: "; cin>>pass; 
         benar="restoran";
         benarN="kelompok3";
         system("cls");
@@ -49,7 +49,7 @@ int main(){
 }
     do {
         cout<<"\t\t\t\t==================================================\n";
-        cout<<"\t\t\t\t======= Selamat Datang di IZEL Coffe Shop ========\n";
+        cout<<"\t\t\t\t======    Selamat Datang di IZEL RESTO    ========\n";
         cout<<"\t\t\t\t==================================================\n";
         cout<<"\t\t\t\tMenu Makanan :\n";
         menu_makanan();
