@@ -9,7 +9,6 @@ using namespace std;
 void pesan_makanan(){
     char menu_makanan, menu_minuman;
     int harga_makanan, harga_minuman;
-
     cout<<"\t\t\t\tDAFTAR MENU MAKANAN\n";
     cout<<"\t\t\t\t1. Seblak      : Rp.10000\n";
     cout<<"\t\t\t\t2. Batagor     : Rp.15000\n";
@@ -25,23 +24,23 @@ void pesan_makanan(){
     cout<<"\t\t\t\tsilahkan pilih makanan: "; cin>>menu_makanan;
     switch (menu_makanan){
         case '1':
-            cout<<"\t\t\t\tanda memesan Seblak\n";
+            cout<<"\t\t\t\tanda memesan Seblak\n\n";
             harga_makanan = 10000;
             break;
         case '2':
-            cout<<"\t\t\t\tanda memesan Batagor\n";
+            cout<<"\t\t\t\tanda memesan Batagor\n\n";
             harga_makanan = 15000;
             break;
         case '3':
-            cout<<"\t\t\t\tanda memesan Bakso\n";
+            cout<<"\t\t\t\tanda memesan Bakso\n\n";
             harga_makanan = 12000;
             break;
         case '4':
-            cout<<"\t\t\t\tanda memesan Nasi Goreng\n";
+            cout<<"\t\t\t\tanda memesan Nasi Goreng\n\n";
             harga_makanan = 18000;
             break;
         case '5':
-            cout<<"\t\t\t\tanda memesan Bubur Aceh\n";
+            cout<<"\t\t\t\tanda memesan Bubur Aceh\n\n";
             harga_makanan = 5000;
             break;
         default:
@@ -52,23 +51,23 @@ void pesan_makanan(){
     cout<<"\t\t\t\tsilahkan pilih minuman: "; cin>>menu_minuman;
     switch (menu_minuman){
         case '1':
-            cout<<"\t\t\t\tanda memesan Es Kopi Susu\n";
+            cout<<"\t\t\t\tanda memesan Es Kopi Susu\n\n";
             harga_minuman = 5000;
             break;
         case '2':
-            cout<<"\t\t\t\tanda memesan Brown Sugar Boba\n";
+            cout<<"\t\t\t\tanda memesan Brown Sugar Boba\n\n";
             harga_minuman = 12000;
             break;
         case '3':
-            cout<<"\t\t\t\tanda memesan Matcha Latte\n";
+            cout<<"\t\t\t\tanda memesan Matcha Latte\n\n";
             harga_minuman = 10000;
             break;
         case '4':
-            cout<<"\t\t\t\tanda memesan Kopi Original\n";
+            cout<<"\t\t\t\tanda memesan Kopi Original\n\n";
             harga_minuman = 4000;
             break;
         case '5':
-            cout<<"\t\t\t\tanda memesan Eskrim\n";
+            cout<<"\t\t\t\tanda memesan Eskrim\n\n";
             harga_minuman = 8000;
             break;
         default:
@@ -76,8 +75,10 @@ void pesan_makanan(){
             cout<<"\t\t\t\tminuman tidak tersedia\n";
             return pesan_makanan();
     }
-    cout<<"\n";
     cout<<"\t\t\t\tTotal yang harus dibayarkan adalah: Rp."<<harga_makanan + harga_minuman<<endl;
+}
+void LogOut(){
+    cout<<"\t\t\t\t<<<<<<<(Anda Berhasil Log Out)>>>>>>>>\n";
 }
 int main(){
     int menu;
@@ -115,7 +116,7 @@ int main(){
         cout<<"\t\t\t\t    1.Pesan makanan dan minuman\n";
         cout<<"\t\t\t\t    2.metode pembayaran\n";
         cout<<"\t\t\t\t    3.profil karyawan restoran :v\n";
-        cout<<"\t\t\t\t    4.EXIT\n";
+        cout<<"\t\t\t\t    4.Log Out\n";
         cout<<"\t\t\t\t    silahkan pilih menu(1-4): ";cin>>menu;
         switch(menu) {
             case 1 :
@@ -127,16 +128,17 @@ int main(){
             case 3 : ;   
             break;
             case 4 :
-                return 0;
+                system("cls");
+                LogOut();
+                return main();
                 break;
             default :
-                cout<<"\t\t\t\ttidak ada menu\n";
+                cout<<"\t\t\t\t    tidak ada menu\n";
         }      
-        cout<<"\t\t\t\tLanjut? (y/n) ";  cin>>ulang;  
+        cout<<"\t\t\t\t    Lanjut? (y/n) ";  cin>>ulang;  
     }  
     while(ulang == "y");
     system("cls");
-    cout<<"pesanan selesai, silahkan datang kembali...";
-    system("pause");
+    cout<<"\t\t\t\t<<<<<<<(Anda Berhasil Log Out)>>>>>>>>\n";
     return main();
 }
