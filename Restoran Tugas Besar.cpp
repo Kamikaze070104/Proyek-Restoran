@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-/*Tugas Kelompok 3, restoran
+/*Tugas Kelompok 3, kasir restoran
 Anggota kelompok : 
 1. Faizal Azzriel Gibar 2205719
 2. Rofi'ul Himam 2206231
