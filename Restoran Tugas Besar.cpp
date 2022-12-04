@@ -111,12 +111,12 @@ int main(){
         cout<<"\t\t\t\t====================================\n";
         cout<<"\t\t\t\t=== Selamat Datang di IZEL RESTO ===\n";
         cout<<"\t\t\t\t====================================\n";
-        cout<<"\t\t\t\t<--------(MENU)-------->\n";
-        cout<<"\t\t\t\t1.Pesan makanan dan minuman\n";
-        cout<<"\t\t\t\t2.metode pembayaran\n";
-        cout<<"\t\t\t\t3.tentang kelompok 3\n";
-        cout<<"\t\t\t\t4.EXIT\n";
-        cout<<"\t\t\t\tsilahkan pilih menu(1-3): ";cin>>menu;
+        cout<<"\t\t\t\t    <--------(MENU)-------->\n";
+        cout<<"\t\t\t\t    1.Pesan makanan dan minuman\n";
+        cout<<"\t\t\t\t    2.metode pembayaran\n";
+        cout<<"\t\t\t\t    3.profil karyawan restoran :v\n";
+        cout<<"\t\t\t\t    4.EXIT\n";
+        cout<<"\t\t\t\t    silahkan pilih menu(1-4): ";cin>>menu;
         switch(menu) {
             case 1 :
                 system("cls"); 
