@@ -11,40 +11,44 @@ void pesan_makanan(){
     int harga_makanan, harga_minuman;
     int bayar;
     int total;
+    string namaPelanggan;
+    cout<<"\t\t\t\tMasukan nama anda: ";
+    cin>>namaPelanggan;
+    cout<<"\t\t\t\tPelanggan Atas nama " << namaPelanggan << endl;
     cout<<"\t\t\t\tDAFTAR MENU MAKANAN\n";
-    cout<<"\t\t\t\t1. Seblak      : Rp.10000\n";
-    cout<<"\t\t\t\t2. Batagor     : Rp.15000\n";
-    cout<<"\t\t\t\t3. Bakso       : Rp.12000\n";
-    cout<<"\t\t\t\t4. Nasi Goreng : Rp.18000\n";
-    cout<<"\t\t\t\t5. Bubur Aceh  : Rp.5000\n";
+    cout<<"\t\t\t\t1.batagor    : Rp.15000\n";
+    cout<<"\t\t\t\t2.seblak     : Rp.10000\n";
+    cout<<"\t\t\t\t3.bakso      : Rp.12000\n";
+    cout<<"\t\t\t\t4.rawon      : Rp.12500\n";
+    cout<<"\t\t\t\t5.soto       : Rp.17000\n";
     cout<<"\t\t\t\tDAFTAR MENU MINUMAN\n";
-    cout<<"\t\t\t\t1. Es Kopi Susu      : Rp.5000\n"; 
-    cout<<"\t\t\t\t2. Brown Sugar Boba  : Rp.12000\n";
-    cout<<"\t\t\t\t3. Matcha Latte      : Rp.10000\n";
-    cout<<"\t\t\t\t4. Kopi original     : Rp.4000\n";
-    cout<<"\t\t\t\t5. Es Krim           : Rp.8000\n";
+    cout<<"\t\t\t\t1.kopi       : Rp.6500\n"; 
+    cout<<"\t\t\t\t2.teh        : Rp.5000\n";
+    cout<<"\t\t\t\t3.susu       : Rp.5000\n";
+    cout<<"\t\t\t\t4.mojito     : Rp.8500\n";
+    cout<<"\t\t\t\t5.sprite     : Rp.5000\n";
     cout<<"\t\t\t\tsilahkan pilih makanan: ";
     cin>>menu_makanan;
     switch (menu_makanan){
         case '1':
-            cout<<"\t\t\t\tanda memesan Seblak\n\n";
-            harga_makanan = 10000;
-            break;
-        case '2':
-            cout<<"\t\t\t\tanda memesan Batagor\n\n";
+            cout<<"\t\t\t\tanda memesan batagor\n\n";
             harga_makanan = 15000;
             break;
+        case '2':
+            cout<<"\t\t\t\tanda memesan seblak\n\n";
+            harga_makanan = 10000;
+            break;
         case '3':
-            cout<<"\t\t\t\tanda memesan Bakso\n\n";
+            cout<<"\t\t\t\tanda memesan bakso\n\n";
             harga_makanan = 12000;
             break;
         case '4':
-            cout<<"\t\t\t\tanda memesan Nasi Goreng\n\n";
-            harga_makanan = 18000;
+            cout<<"\t\t\t\tanda memesan rawon\n\n";
+            harga_makanan = 12500;
             break;
         case '5':
-            cout<<"\t\t\t\tanda memesan Bubur Aceh\n\n";
-            harga_makanan = 5000;
+            cout<<"\t\t\t\tanda memesan soto\n\n";
+            harga_makanan = 17000;
             break;
         default:
             system("cls");
@@ -55,24 +59,24 @@ void pesan_makanan(){
     cin>>menu_minuman;
     switch (menu_minuman){
         case '1':
-            cout<<"\t\t\t\tanda memesan Es Kopi Susu\n\n";
-            harga_minuman = 5000;
+            cout<<"\t\t\t\tanda memesan kopi\n\n";
+            harga_minuman = 6500;
             break;
         case '2':
-            cout<<"\t\t\t\tanda memesan Brown Sugar Boba\n\n";
-            harga_minuman = 12000;
+            cout<<"\t\t\t\tanda memesan teh\n\n";
+            harga_minuman = 5000;
             break;
         case '3':
-            cout<<"\t\t\t\tanda memesan Matcha Latte\n\n";
-            harga_minuman = 10000;
+            cout<<"\t\t\t\tanda memesan susu\n\n";
+            harga_minuman = 5000;
             break;
         case '4':
-            cout<<"\t\t\t\tanda memesan Kopi Original\n\n";
-            harga_minuman = 4000;
+            cout<<"\t\t\t\tanda memesan mojito\n\n";
+            harga_minuman = 8500;
             break;
         case '5':
-            cout<<"\t\t\t\tanda memesan Eskrim\n\n";
-            harga_minuman = 8000;
+            cout<<"\t\t\t\tanda memesan sprite\n\n";
+            harga_minuman = 5000;
             break;
         default:
             system("cls");
@@ -80,19 +84,59 @@ void pesan_makanan(){
             return pesan_makanan();
     }
     total = harga_makanan + harga_minuman;
-    cout<<"\t\t\t\tTotal yang harus dibayarkan adalah: Rp."<<total<<endl;
-    cout<<"\t\t\t\tsilahkan masukkan uang anda Rp.";
-    cin>>bayar;
+    int metodePembayaran;
+    cout<<"\t\t\t\tBayar menggunakan apa?\n";
+    cout<<"\t\t\t\t1.Dana\n";
+    cout<<"\t\t\t\t2.Ovo\n";
+    cout<<"\t\t\t\t3.LinkAja\n";
+    cout<<"\t\t\t\t4.Jenius\n";
+    cout<<"\t\t\t\tPilih metode pembayaran anda: ";
+    cin>>metodePembayaran;
     system("cls");
-    if(bayar == total){
-        cout<<"\t\t\t\tkembalian anda Rp."<<bayar-total<<", uang anda pas\n";
+    if(metodePembayaran == 1){
+        //Output nama + total pembayaran + metode pembayaran
+        cout<<"\t\t\t\tHii "<<namaPelanggan<<endl;
+        cout<<"\t\t\t\tJumlah total pesanan anda : "<<total<<endl<<"\t\t\t\tmetode pembayaran anda : "<<"Dana"<<endl;
+    }else if(metodePembayaran == 2){
+        //Output nama + total pembayaran + metode pembayaran
+        cout<<"\t\t\t\tHii " << namaPelanggan << endl;
+        cout<<"\t\t\t\tJumlah total pesanan anda : " <<total<<endl<<"\t\t\t\tmetode pembayaran anda : "<<"Ovo"<<endl;
+    }else if(metodePembayaran == 3){
+        //Output nama + total pembayaran + metode pembayaran
+        cout<<"\t\t\t\tHii " << namaPelanggan << endl;
+        cout<<"\t\t\t\tJumlah total pesanan anda : "<<total<<endl<<"\t\t\t\tmetode pembayaran anda : "<<"LinkAja"<<endl;
+    }else if(metodePembayaran == 4){
+        //Output nama + total pembayaran + metode pembayaran
+        cout<<"\t\t\t\tHii " << namaPelanggan << endl;
+        cout<<"\t\t\t\tJumlah total pesanan anda : "<<total<<endl<<"\t\t\t\tmetode pembayaran anda :"<<"Jenius"<<endl;
+    }else{
+        cout<<"\t\t\t\tMetode pembayaran tidak tersedia";
     }
-    else if(bayar > total){
-        cout<<"\t\t\t\tkembalian anda Rp."<<bayar-total<<", terima kasih\n";
+}
+void cari_menu(){
+    string pilihMakanan;
+    string hasil;
+    string makanan[10] = {"seblak", "batagor", "bakso", "rawon", "kopi","susu", "sprite", "mojito", "teh", "soto"};
+    cout << "Input nama Menu yang ingin dicari: " ;
+    cin >> pilihMakanan;
+    //Looping array terlebih dahulu
+    for(int i = 0 ; i < 10; i++){
+        //cout << makanan[i] << endl;
+        if(pilihMakanan == makanan[i]){
+            //Masukan data makanan yang benar kedalam variable
+            hasil = makanan[i];
+        }
     }
-    else{
-        cout<<"\t\t\tTotal yang harus dibayarkan Rp."<<total<<", maaf uang anda kurang Rp."<<total-bayar<<"\n";
-        return pesan_makanan();
+    //Penkondisian hasil pilih makanan dan hasil data yang benar
+    if(pilihMakanan == hasil ){
+            for(int i = 1 ; i < 10; i++){
+                cout <<i<<"."<< makanan[i] << endl;
+            }
+        //Jika benar
+        cout << "Menu di temukan - " << hasil << endl;
+    }else{
+        //Jika salah
+        cout << "Menu tidak di temukan pada -" << pilihMakanan << endl;
     }
 }
 void profil(){
@@ -163,7 +207,6 @@ int main(){
         benarN="kelompok3";
         system("cls");
         if(pass==benar&&username==benarN){
-            cout<<"\t\t\t\t Selamat Datang :v\n";
             break;
         }
         else if(i==0){
@@ -180,7 +223,7 @@ int main(){
         cout<<"\t\t\t\t====================================\n";
         cout<<"\t\t\t\t    <--------(MENU)-------->\n";
         cout<<"\t\t\t\t    1.Pesan makanan dan minuman\n";
-        cout<<"\t\t\t\t    2.metode pembayaran\n";
+        cout<<"\t\t\t\t    2.Cari menu\n";
         cout<<"\t\t\t\t    3.profil karyawan restoran :v\n";
         cout<<"\t\t\t\t    4.Log Out\n";
         cout<<"\t\t\t\t    silahkan pilih menu(1-4): ";
@@ -190,12 +233,14 @@ int main(){
                 system("cls"); 
                 pesan_makanan();
                 break;  
-            case 2 : ;    
+            case 2 :
+                system("cls");
+                cari_menu();   
             break;
             case 3 :
                 system("cls");
-                profil();   
-            break;
+                profil();
+                break;
             case 4 :
                 system("cls");
                 LogOut();
@@ -210,5 +255,5 @@ int main(){
     while(ulang == "y");
     system("cls");
     cout<<"\t\t\t\t<<<<<<<(Anda Berhasil Log Out)>>>>>>>>\n";
-    return main();
+    return 0;
 }
