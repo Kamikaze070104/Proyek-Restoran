@@ -9,6 +9,8 @@ using namespace std;
 void pesan_makanan(){
     char menu_makanan, menu_minuman;
     int harga_makanan, harga_minuman;
+    int bayar;
+    int total;
     cout<<"\t\t\t\tDAFTAR MENU MAKANAN\n";
     cout<<"\t\t\t\t1. Seblak      : Rp.10000\n";
     cout<<"\t\t\t\t2. Batagor     : Rp.15000\n";
@@ -77,7 +79,66 @@ void pesan_makanan(){
             cout<<"\t\t\t\tminuman tidak tersedia\n";
             return pesan_makanan();
     }
-    cout<<"\t\t\t\tTotal yang harus dibayarkan adalah: Rp."<<harga_makanan + harga_minuman<<endl;
+    total = harga_makanan + harga_minuman;
+    cout<<"\t\t\t\tTotal yang harus dibayarkan adalah: Rp."<<total<<endl;
+    cout<<"\t\t\t\tsilahkan masukkan uang anda Rp.";
+    cin>>bayar;
+    system("cls");
+    if(bayar == total){
+        cout<<"\t\t\t\tkembalian anda Rp."<<bayar-total<<", uang anda pas\n";
+    }
+    else if(bayar > total){
+        cout<<"\t\t\t\tkembalian anda Rp."<<bayar-total<<", terima kasih\n";
+    }
+    else{
+        cout<<"\t\t\t\tTotal yang harus dibayarkan Rp."<<total<<", maaf uang anda kurang\n";
+        return pesan_makanan();
+    }
+}
+void profil(){
+    int a;
+    string lagi;
+    do{
+        system("cls");
+        cout<<"\t\t\t\tTentang karyawan Restoran, kelompok 3\n";
+        cout<<"\t\t\t\t1.Faizal\n";
+        cout<<"\t\t\t\t2.Rofi'ul\n";
+        cout<<"\t\t\t\t3.Jovanka\n";
+        cout<<"\t\t\t\t4.Nadila\n";
+        cout<<"\t\t\t\tSilahkan ingin lihat yang mana(1-4) ";
+        cin>>a;
+        switch(a){
+            case 1 :
+                system("cls");
+                cout<<"\t\t\t\tnama lengkap: Faizal Azzriel Gibar\n";
+                cout<<"\t\t\t\tnama panggilan: Paisal\n";
+                cout<<"\t\t\t\tNIM: 2205719\n";
+                break;
+            case 2 :
+                system("cls");
+                cout<<"\t\t\t\tnama lengkap: Rofi'ul Himam\n";
+                cout<<"\t\t\t\tnama panggilan: Rofi\n";
+                cout<<"\t\t\t\tNIM: 2206231\n";
+                break;
+            case 3 :
+                system("cls");
+                cout<<"\t\t\t\tnama lengkap: Jovanka Alexandro\n";
+                cout<<"\t\t\t\tnama panggilan: Jovan\n";
+                cout<<"\t\t\t\tNIM: 2206407\n";
+                break;
+            case 4 :
+                system("cls");
+                cout<<"\t\t\t\tnama lengkap: Nadila Putri Prihanita\n";
+                cout<<"\t\t\t\tnama panggilan: Nadila\n";
+                cout<<"\t\t\t\tNIM: 2209757\n";
+                break;
+            default :
+                cout<<"\t\t\t\tkaryawan tidak ditemukan\n";
+    }
+        cout<<"\t\t\t\t    Lagi?(y/n) ";
+        cin>>lagi;
+    }
+    while(lagi == "y");
 }
 void LogOut(){
     cout<<"\t\t\t\t<<<<<<<(Anda Berhasil Log Out)>>>>>>>>\n";
@@ -85,16 +146,19 @@ void LogOut(){
 int main(){
     int menu;
     string ulang;
+    string pass;
+    string benar;
+    string username;
+    string benarN;
     for(int i = 2; i >= 0; --i){
          cout<<"\n";
          cout<<"\t\t\t\t<<<<<<<<<<<(Silahkan Login)>>>>>>>>>>>\n";
          cout<<"\n";
-        string pass;
-        string benar;
-        string username;
-        string benarN;
-        cout<<"\t\t\t\tusername: "; cin>>username;
-        cout<<"\t\t\t\tPassword: "; cin>>pass; 
+        
+        cout<<"\t\t\t\tusername: ";
+        cin>>username;
+        cout<<"\t\t\t\tPassword: ";
+        cin>>pass; 
         benar="restoran";
         benarN="kelompok3";
         system("cls");
@@ -119,7 +183,8 @@ int main(){
         cout<<"\t\t\t\t    2.metode pembayaran\n";
         cout<<"\t\t\t\t    3.profil karyawan restoran :v\n";
         cout<<"\t\t\t\t    4.Log Out\n";
-        cout<<"\t\t\t\t    silahkan pilih menu(1-4): ";cin>>menu;
+        cout<<"\t\t\t\t    silahkan pilih menu(1-4): ";
+        cin>>menu;
         switch(menu) {
             case 1 :
                 system("cls"); 
@@ -127,17 +192,20 @@ int main(){
                 break;  
             case 2 : ;    
             break;
-            case 3 : ;   
+            case 3 :
+                system("cls");
+                profil();   
             break;
             case 4 :
                 system("cls");
                 LogOut();
-                return main();
+                return 0;
                 break;
             default :
                 cout<<"\t\t\t\t    tidak ada menu\n";
         }      
-        cout<<"\t\t\t\t    Lanjut? (y/n) ";  cin>>ulang;  
+        cout<<"\t\t\t\t    Lanjut? (y/n) ";
+        cin>>ulang;  
     }  
     while(ulang == "y");
     system("cls");
