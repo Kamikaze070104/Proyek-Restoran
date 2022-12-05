@@ -21,7 +21,8 @@ void pesan_makanan(){
     cout<<"\t\t\t\t3. Matcha Latte      : Rp.10000\n";
     cout<<"\t\t\t\t4. Kopi original     : Rp.4000\n";
     cout<<"\t\t\t\t5. Es Krim           : Rp.8000\n";
-    cout<<"\t\t\t\tsilahkan pilih makanan: "; cin>>menu_makanan;
+    cout<<"\t\t\t\tsilahkan pilih makanan: ";
+    cin>>menu_makanan;
     switch (menu_makanan){
         case '1':
             cout<<"\t\t\t\tanda memesan Seblak\n\n";
@@ -48,7 +49,8 @@ void pesan_makanan(){
             cout<<"\t\t\t\tmakana tidak tersedia\n";
             return pesan_makanan();
     }
-    cout<<"\t\t\t\tsilahkan pilih minuman: "; cin>>menu_minuman;
+    cout<<"\t\t\t\tsilahkan pilih minuman: ";
+    cin>>menu_minuman;
     switch (menu_minuman){
         case '1':
             cout<<"\t\t\t\tanda memesan Es Kopi Susu\n\n";
