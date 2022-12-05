@@ -91,7 +91,7 @@ void pesan_makanan(){
         cout<<"\t\t\t\tkembalian anda Rp."<<bayar-total<<", terima kasih\n";
     }
     else{
-        cout<<"\t\t\t\tTotal yang harus dibayarkan Rp."<<total<<", maaf uang anda kurang\n";
+        cout<<"\t\t\tTotal yang harus dibayarkan Rp."<<total<<", maaf uang anda kurang Rp."<<total-bayar<<"\n";
         return pesan_makanan();
     }
 }
