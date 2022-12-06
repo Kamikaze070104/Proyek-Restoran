@@ -8,85 +8,95 @@ using namespace std;
    3. Jovanka Alexandro 2206407
    4. Nadila putri Prihanita 2209757 */
 void pesan_makanan(){
-    char menu_makanan, menu_minuman;
-    int harga_makanan, harga_minuman;
-    int bayar;
+    int pilih_menu[100];
+    int jumlah_menu;
+    int hargaMenu[100], jumblah[100];
     int total;
+    int totalPembayaran[100];
+    int metodePembayaran;
+    string menu[100];
     string namaPelanggan;
     cout<<"\t\t\t\tMasukan nama anda: ";
     cin.ignore();
     getline(cin,namaPelanggan);
-    cout<<"\t\t\t\tPelanggan Atas nama " << namaPelanggan << endl;
-    cout<<"\t\t\t\tDAFTAR MENU MAKANAN\n";
+    cout<<"\t\t\t\tPelanggan Atas nama "<<namaPelanggan<<endl;
+    cout<<"\t\t\t\tDAFTAR MENU\n";
     cout<<"\t\t\t\t1.batagor    : Rp.15000\n";
     cout<<"\t\t\t\t2.seblak     : Rp.10000\n";
     cout<<"\t\t\t\t3.bakso      : Rp.12000\n";
     cout<<"\t\t\t\t4.rawon      : Rp.12500\n";
     cout<<"\t\t\t\t5.soto       : Rp.17000\n";
-    cout<<"\t\t\t\tDAFTAR MENU MINUMAN\n";
-    cout<<"\t\t\t\t1.kopi       : Rp.6500\n"; 
-    cout<<"\t\t\t\t2.teh        : Rp.5000\n";
-    cout<<"\t\t\t\t3.susu       : Rp.5000\n";
-    cout<<"\t\t\t\t4.mojito     : Rp.8500\n";
-    cout<<"\t\t\t\t5.sprite     : Rp.5000\n";
-    cout<<"\t\t\t\tsilahkan pilih makanan: ";
-    cin>>menu_makanan;
-    switch (menu_makanan){
-        case '1':
-            cout<<"\t\t\t\tanda memesan batagor\n\n";
-            harga_makanan = 15000;
-            break;
-        case '2':
-            cout<<"\t\t\t\tanda memesan seblak\n\n";
-            harga_makanan = 10000;
-            break;
-        case '3':
-            cout<<"\t\t\t\tanda memesan bakso\n\n";
-            harga_makanan = 12000;
-            break;
-        case '4':
-            cout<<"\t\t\t\tanda memesan rawon\n\n";
-            harga_makanan = 12500;
-            break;
-        case '5':
-            cout<<"\t\t\t\tanda memesan soto\n\n";
-            harga_makanan = 17000;
-            break;
-        default:
-            system("cls");
-            cout<<"\t\t\t\tmakana tidak tersedia\n";
-            return pesan_makanan();
+    cout<<"\t\t\t\t6.kopi       : Rp.6500\n"; 
+    cout<<"\t\t\t\t7.teh        : Rp.5000\n";
+    cout<<"\t\t\t\t8.susu       : Rp.5000\n";
+    cout<<"\t\t\t\t9.mojito     : Rp.8500\n";
+    cout<<"\t\t\t\t10.sprite    : Rp.5000\n";
+    cout<<"\t\t\t\tingin pilih berapa menu? ";
+    cin >>jumlah_menu;
+    for(int i = 0 ; i < jumlah_menu ; i++){
+        //Pilih menu yang sudah terserdia
+        cout << "Pilih menu :";
+        cin >> pilih_menu[i];
+
+        if(pilih_menu[i] <= jumlah_menu +1){
+            switch(pilih_menu[i]){
+                case 1 :
+                    menu[i] = "batagor";
+                    hargaMenu[i] = 15000;
+                    break;
+                case 2 :
+                    menu[i] = "seblak";
+                    hargaMenu[i] = 10000;
+                break;
+                case 3 :
+                    menu[i] = "bakso";
+                    hargaMenu[i] = 12000;
+                    break;
+                case 4 :
+                    menu[i] = "rawon";
+                    hargaMenu[i] = 12500;
+                    break;
+                case 5 :
+                    menu[i] = "soto";
+                    hargaMenu[i] = 17000;
+                    break;
+                case 6 :
+                    menu[i] = "kopi";
+                    hargaMenu[i] = 6500;
+                    break;
+                case 7 :
+                    menu[i] = "teh";
+                    hargaMenu[i] = 5000;
+                    break;
+                case 8 :
+                    menu[i] = "susu";
+                    hargaMenu[i] = 5000;
+                    break;
+                case 9 :
+                    menu[i] = "mojito";
+                    hargaMenu[i] = 8500;
+                    break;
+                case 10 :
+                    menu[i] = "sprite";
+                    hargaMenu[i] = 5000;
+                    break;
+                default :
+                cout<<"tidak ada menu\n";
+            }
+                //pilih jumblah menu
+                cout << "jumblah porsi " << menu[i] << " :";
+                cin >> jumblah[i];
+                cout << endl;
+            //kalikan jumblah menu dengan harga
+            totalPembayaran[i] = jumblah[i] * hargaMenu[i];
+            //pilih jumblah menu sesuai dengan inputan jika sudah selesai maka hitung total harga keseluruhan
+            total += totalPembayaran[i];
+        }
+        else{
+            //jika menu tidak ada maka output = "menu tidak tersedia
+            cout << "gagal" << endl;
+        }
     }
-    cout<<"\t\t\t\tsilahkan pilih minuman: ";
-    cin>>menu_minuman;
-    switch (menu_minuman){
-        case '1':
-            cout<<"\t\t\t\tanda memesan kopi\n\n";
-            harga_minuman = 6500;
-            break;
-        case '2':
-            cout<<"\t\t\t\tanda memesan teh\n\n";
-            harga_minuman = 5000;
-            break;
-        case '3':
-            cout<<"\t\t\t\tanda memesan susu\n\n";
-            harga_minuman = 5000;
-            break;
-        case '4':
-            cout<<"\t\t\t\tanda memesan mojito\n\n";
-            harga_minuman = 8500;
-            break;
-        case '5':
-            cout<<"\t\t\t\tanda memesan sprite\n\n";
-            harga_minuman = 5000;
-            break;
-        default:
-            system("cls");
-            cout<<"\t\t\t\tminuman tidak tersedia\n";
-            return pesan_makanan();
-    }
-    total = harga_makanan + harga_minuman;
-    int metodePembayaran;
     cout<<"\t\t\t\tBayar menggunakan apa?\n";
     cout<<"\t\t\t\t1.Dana\n";
     cout<<"\t\t\t\t2.Ovo\n";
