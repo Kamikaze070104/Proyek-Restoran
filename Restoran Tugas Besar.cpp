@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 using namespace std;
 /*Tugas Kelompok 3, kasir restoran
   Anggota kelompok : 
@@ -13,7 +14,8 @@ void pesan_makanan(){
     int total;
     string namaPelanggan;
     cout<<"\t\t\t\tMasukan nama anda: ";
-    cin>>namaPelanggan;
+    cin.ignore();
+    getline(cin,namaPelanggan);
     cout<<"\t\t\t\tPelanggan Atas nama " << namaPelanggan << endl;
     cout<<"\t\t\t\tDAFTAR MENU MAKANAN\n";
     cout<<"\t\t\t\t1.batagor    : Rp.15000\n";
@@ -194,6 +196,7 @@ int main(){
     string benar;
     string username;
     string benarN;
+    ofstream data;
     for(int i = 2; i >= 0; --i){
          cout<<"\n";
          cout<<"\t\t\t\t<<<<<<<<<<<(Silahkan Login)>>>>>>>>>>>\n";
@@ -226,9 +229,10 @@ int main(){
         cout<<"\t\t\t\t    2.Cari menu\n";
         cout<<"\t\t\t\t    3.profil karyawan restoran :v\n";
         cout<<"\t\t\t\t    4.Log Out\n";
+        cout<<"\t\t\t\t    5.EXIT\n";
         cout<<"\t\t\t\t    silahkan pilih menu(1-4): ";
         cin>>menu;
-        switch(menu) {
+        switch(menu){
             case 1 :
                 system("cls"); 
                 pesan_makanan();
@@ -244,8 +248,11 @@ int main(){
             case 4 :
                 system("cls");
                 LogOut();
-                return 0;
+                return main();
                 break;
+            case 5 :
+                system("cls");
+                return 0;
             default :
                 cout<<"\t\t\t\t    tidak ada menu\n";
         }      
@@ -255,5 +262,5 @@ int main(){
     while(ulang == "y");
     system("cls");
     cout<<"\t\t\t\t<<<<<<<(Anda Berhasil Log Out)>>>>>>>>\n";
-    return 0;
+    return main();
 }
