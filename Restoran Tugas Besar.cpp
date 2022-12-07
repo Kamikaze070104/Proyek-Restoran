@@ -1,6 +1,5 @@
 #include <iostream>
 #include <fstream>
-#include <string>
 using namespace std;
 /*Tugas Kelompok 3, kasir restoran
   Anggota kelompok : 
@@ -15,20 +14,16 @@ void pesan_makanan(){
     int hargaMenu[100];
     int totalBayar;
     int memilihJumblahMenu;
-    //int daftarMenu = 2;
+    int daftarMenu = 2;
     int metodePembayaran;
-
     string menu[100];
     //Input nama pelanggan
     string namaPelanggan;
-    cout << "\t\t\t\t masukan nama anda: ";
+    cout<<"\t\t\t\t masukan nama anda: ";
     cin.ignore();
     getline(cin,namaPelanggan);
-
-    cout << "\t\t\t\t Pelanggan dengan atas nama: " << namaPelanggan << endl;
-
+    cout<<"\t\t\t\t Pelanggan dengan atas nama: "<<namaPelanggan<<endl;
     //input jumblah menu yang ingin di pesan (Lakukan pengulangan)
-
     cout<<"\t\t\t\tDAFTAR MENU\n";
     cout<<"\t\t\t\t1.batagor    : Rp.15000\n";
     cout<<"\t\t\t\t2.seblak     : Rp.10000\n";
@@ -41,13 +36,11 @@ void pesan_makanan(){
     cout<<"\t\t\t\t9.mojito     : Rp.8500\n";
     cout<<"\t\t\t\t10.sprite    : Rp.5000\n";
     cout<<"\t\t\t\tingin pilih berapa menu? ";
-    cin >> memilihJumblahMenu;
-
+    cin>>memilihJumblahMenu;
     for(int i = 0 ; i < memilihJumblahMenu ; i++){
         //Pilih menu yang sudah terserdia
         cout << "Pilih menu :";
         cin >> pilihMenu[i];
-
         if(pilihMenu[i] < memilihJumblahMenu +1){
             switch(pilihMenu[i]){
                 case 1 :
@@ -94,20 +87,17 @@ void pesan_makanan(){
                 cout<<"tidak ada menu\n";
             }
                 //pilih jumblah menu
-                cout << "jumblah porsi " << menu[i] << " :";
-                cin >> jumblah[i];
-                cout << endl;
-
+                cout<<"jumblah porsi "<<menu[i]<<" :";
+                cin>>jumblah[i];
+                cout<<endl;
             //kalikan jumblah menu dengan harga
-            totalPembayaran[i] = jumblah[i] * hargaMenu[i];
-
+            totalPembayaran[i]=jumblah[i]*hargaMenu[i];
             //pilih jumblah menu sesuai dengan inputan jika sudah selesai maka hitung total harga keseluruhan
-            totalBayar += totalPembayaran[i];
-
-
-        }else{
+            totalBayar+=totalPembayaran[i];
+        }
+        else{
             //jika menu tidak ada maka output = "menu tidak tersedia
-            cout << "gagal" << endl;
+            cout<<"gagal"<<endl;
         }
     }
             //Pilih metode pembayaran
@@ -116,11 +106,11 @@ void pesan_makanan(){
             cout<<"\t\t\t\t    3.LinkAja \n";
             cout<<"\t\t\t\t    4.Jenius \n";
             cout<<"\t\t\t\t    Pilih metode pembayaran anda ";
-            cin >> metodePembayaran;
+            cin>>metodePembayaran;
             if(metodePembayaran == 1){
                 //Output nama + total pembayaran + metode pembayaran
-                cout << "Nama Pelaggan :" << namaPelanggan << endl;
-                cout << "Jumblah total pesanan anda : " << totalBayar << endl << "dan metode pembayaran anda : " << "Dana" << endl;
+                cout<<"Nama Pelaggan : "<<namaPelanggan<<endl;
+                cout<<"Jumblah total pesanan anda : "<<totalBayar<<endl<<"dan metode pembayaran anda : "<<"Dana"<<endl;
             }else if(metodePembayaran == 2){
                 //Output nama + total pembayaran + metode pembayaran
                 cout << "Nama Pelaggan : " << namaPelanggan << endl;
@@ -137,7 +127,6 @@ void pesan_makanan(){
                 cout << "\t\t\t\t Metode pembayaran tidak tersedia";
             }
 }
-
 void cari_menu(){
     string pilihMakanan;
     string hasil;
