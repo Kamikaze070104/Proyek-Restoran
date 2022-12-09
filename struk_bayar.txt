@@ -1,8 +1,0 @@
-				===============================
-				Nama Pelanggan   : restoran
-				Metode Pembayaran: Cash
-				Total Harga      : Rp15000
-				--------------------------------
-				dibayarkan       : Rp15000
-				Kembalian        : Rp0
-				================================
