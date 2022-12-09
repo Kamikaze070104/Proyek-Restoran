@@ -9,6 +9,7 @@ using namespace std;
    3. Jovanka Alexandro 2206407
    4. Nadila putri Prihanita 2209757 */
 void pesan_makanan() {
+  ofstream outdata;
   string menu[11] = {"",     "Batagor", "Seblak", "Bakso",  "Rawon", "Soto",
                      "Kopi", "Teh",     "Susu",   "Mojito", "Sprite"};
   int harga[11] = {0,    15000, 10000, 12000, 12500, 17000,
@@ -77,37 +78,70 @@ void pesan_makanan() {
     cout << "\n";
     cout << "\t\t\t\t===============================\n";
     cout << "\t\t\t\tNama Pelanggan    : " << namaPelanggan << "\n";
-    cout << "\t\t\t\tMetode Pembayaran : Dana"
-         << "\n";
+    cout << "\t\t\t\tMetode Pembayaran : Dana";
+    cout << "\n";
     cout << "\t\t\t\tTotal Harga       : Rp" << total_pembayaran << "\n";
     cout << "\t\t\t\t===============================\n";
+    outdata.open("struk_bayar.txt", ios::ate);
+    outdata << "\n";
+    outdata << "\t\t\t\t===============================\n";
+    outdata << "\t\t\t\tNama Pelanggan    : " << namaPelanggan << "\n";
+    outdata << "\t\t\t\tMetode Pembayaran : Dana";
+    outdata<< "\n";
+    outdata<< "\t\t\t\tTotal Harga       : Rp" << total_pembayaran << "\n";
+    outdata<< "\t\t\t\t===============================\n\n";
   } else if (metodePembayaran == 2) {
     // Output nama + total pembayaran + metode pembayaran
     cout << "\n";
     cout << "\t\t\t\t===============================\n";
     cout << "\t\t\t\tNama Pelanggan    : " << namaPelanggan << "\n";
-    cout << "\t\t\t\tMetode Pembayaran : Ovo"
-         << "\n";
+    cout << "\t\t\t\tMetode Pembayaran : Ovo";
+    cout << "\n";
     cout << "\t\t\t\tTotal Harga       : Rp" << total_pembayaran << "\n";
     cout << "\t\t\t\t===============================\n";
+    outdata.open("struk_bayar.txt", ios::ate);
+    outdata << "\n";
+    outdata << "\t\t\t\t===============================\n";
+    outdata << "\t\t\t\tNama Pelanggan    : " << namaPelanggan << "\n";
+    outdata << "\t\t\t\tMetode Pembayaran : Ovo";
+    outdata<< "\n";
+    outdata<< "\t\t\t\tTotal Harga       : Rp" << total_pembayaran << "\n";
+    outdata<< "\t\t\t\t===============================\n\n";
   } else if (metodePembayaran == 3) {
     // Output nama + total pembayaran + metode pembayaran
     cout << "\n";
     cout << "\t\t\t\t===============================\n";
     cout << "\t\t\t\tNama Pelanggan    : " << namaPelanggan << "\n";
-    cout << "\t\t\t\tMetode Pembayaran : LinkAja"
-         << "\n";
+    cout << "\t\t\t\tMetode Pembayaran : LinkAja";
+    cout << "\n";
     cout << "\t\t\t\tTotal Harga       : Rp" << total_pembayaran << "\n";
     cout << "\t\t\t\t===============================\n";
+    outdata.open("struk_bayar.txt", ios::ate);
+    outdata << "\n";
+    outdata << "\t\t\t\t===============================\n";
+    outdata << "\t\t\t\tNama Pelanggan    : " << namaPelanggan << "\n";
+    outdata << "\t\t\t\tMetode Pembayaran : LinkAja";
+    outdata<< "\n";
+    outdata<< "\t\t\t\tTotal Harga       : Rp" << total_pembayaran << "\n";
+    outdata<< "\t\t\t\t===============================\n\n";
   } else if (metodePembayaran == 4) {
     // Output nama + total pembayaran + metode pembayaran
     cout << "\n";
     cout << "\t\t\t\t===============================\n";
     cout << "\t\t\t\tNama Pelanggan    : " << namaPelanggan << "\n";
-    cout << "\t\t\t\tMetode Pembayaran : GoPay"
-         << "\n";
+    cout << "\t\t\t\tMetode Pembayaran : GoPay";
+    cout << "\n";
     cout << "\t\t\t\tTotal Harga       : Rp" << total_pembayaran << "\n";
     cout << "\t\t\t\t===============================\n";
+    outdata.open("struk_bayar.txt", ios::ate);
+    outdata << "\n";
+    outdata << "\t\t\t\t===============================\n";
+    outdata << "\t\t\t\tNama Pelanggan    : " << namaPelanggan << "\n";
+    outdata << "\t\t\t\tMetode Pembayaran : GoPay";
+    outdata<< "\n";
+    outdata<< "\t\t\t\tTotal Harga       : Rp" << total_pembayaran << "\n";
+    outdata<< "\t\t\t\t===============================\n\n";
+    
   } else if (metodePembayaran == 5) {
     // Output nama + total pembayaran + metode pembayaran
     cout << "\n";
@@ -122,13 +156,23 @@ void pesan_makanan() {
     kembalian = uang - total_pembayaran;
     cout << "\t\t\t\t===============================\n";
     cout << "\t\t\t\tNama Pelanggan   : " << namaPelanggan << "\n";
-    cout << "\t\t\t\tMetode Pembayaran: Cash"
-         << "\n";
+    cout << "\t\t\t\tMetode Pembayaran: Cash";
+    cout << "\n";
     cout << "\t\t\t\tTotal Harga      : Rp" << total_pembayaran << "\n";
     cout << "\t\t\t\t--------------------------------\n";
     cout << "\t\t\t\tdibayarkan       : Rp" << uang << "\n";
     cout << "\t\t\t\tKembalian        : Rp" << kembalian << "\n";
     cout << "\t\t\t\t================================\n";
+    outdata.open("struk_bayar.txt", ios::ate);
+    outdata << "\t\t\t\t===============================\n";
+    outdata << "\t\t\t\tNama Pelanggan   : " << namaPelanggan << "\n";
+    outdata << "\t\t\t\tMetode Pembayaran: Cash";
+    outdata << "\n";
+    outdata << "\t\t\t\tTotal Harga      : Rp" << total_pembayaran << "\n";
+    outdata << "\t\t\t\t--------------------------------\n";
+    outdata << "\t\t\t\tdibayarkan       : Rp" << uang << "\n";
+    outdata << "\t\t\t\tKembalian        : Rp" << kembalian << "\n";
+    outdata << "\t\t\t\t================================\n";
   } else {
     cout << "\t\t\t\tMetode pembayaran tidak tersedia";
     return pesan_makanan();
