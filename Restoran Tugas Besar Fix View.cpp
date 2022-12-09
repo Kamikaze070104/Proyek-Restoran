@@ -262,13 +262,13 @@ void cari_menu()
         cout << "\t\t\t\t" << i << "." << makanan[i] << "\n";
       }
       // Jika benar
-      cout << "\t\t\t\tMenu " << hasil << " di temukan"
+      cout << "\t\t\t\tMenu " << hasil << " di temukan";
       cout << "\n";
     } 
     else 
     {
       // Jika salah
-      cout << "\t\t\t\tMenu " << pilihMakanan << " tidak di temukan"
+      cout << "\t\t\t\tMenu " << pilihMakanan << " tidak di temukan";
       cout << "\n";
     }
     cout << "\t\t\t\tMau cari lagi? (y/t): ";
