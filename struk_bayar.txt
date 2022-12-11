@@ -1,8 +1,1 @@
-				===================================================
-				Nama Pelanggan   : juned alnbatros
-				Metode Pembayaran: Cash
-				Total Harga      : Rp15000
-				--------------------------------
-				Uang Tunai       : Rp15000
-				Kembalian        : Rp0
-				===================================================
+

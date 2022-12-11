@@ -39,7 +39,7 @@ int login()
     {
       while (counter >= 1)
       {
-          cout << "\r\t\t\t\tAnda tidak diperkenankan masuk, coba lagi dalam: " << counter;
+          cout << "\r\t\t\t\tAnda tidak diperkenankan masuk, coba lagi dalam: " << counter << flush;
           sleep(1);
           counter--;
       }
