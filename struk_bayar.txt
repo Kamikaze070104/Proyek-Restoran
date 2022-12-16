@@ -1,6 +1,8 @@
-
 				===================================================
-				Nama Pelanggan    : 
-				Metode Pembayaran : Dana 
-				Total Harga       : Rp0
+				Nama Pelanggan   : dd
+				Metode Pembayaran: Cash
+				Total Harga      : Rp30000
+				--------------------------------
+				Uang Tunai       : Rp40000
+				Kembalian        : Rp10000
 				===================================================
