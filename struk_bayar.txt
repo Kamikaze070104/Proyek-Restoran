@@ -1,8 +1,11 @@
 				===================================================
-				Nama Pelanggan   : dd
+				Nama Pelanggan   : faizal azzriel gibar
 				Metode Pembayaran: Cash
-				Total Harga      : Rp30000
+				Total Harga      : Rp42500
 				--------------------------------
-				Uang Tunai       : Rp40000
-				Kembalian        : Rp10000
+				Uang Tunai       : Rp45000
+				Kembalian        : Rp2500
 				===================================================
+
+				
+
