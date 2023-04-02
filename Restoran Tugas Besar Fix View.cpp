@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <unistd.h>
+#include <string>
 
 using namespace std;
 /*Tugas Kelompok 3, kasir restoran
