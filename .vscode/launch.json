@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/FAIZAL/Documents/Projek Faizal/Proyek-Restoran",
-      "program": "c:/Users/FAIZAL/Documents/Projek Faizal/Proyek-Restoran/build/Debug/outDebug",
+      "cwd": "c:/Users/FAIZAL/Desktop/Projek Faizal/Proyek-Restoran",
+      "program": "c:/Users/FAIZAL/Desktop/Projek Faizal/Proyek-Restoran/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
